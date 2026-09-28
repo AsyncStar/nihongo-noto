@@ -12,86 +12,74 @@ export const adjectives = {
     feelingsOpinions: {
 
         omoshirui: {
-            main: "", reading: "", meaning: "Interesting; funny",
-            notes: {
-                lesson: null,
-            }
+            main: "おもしるい", reading: "", meaning: "Interesting; funny",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         tsumaranai: {
-            main: "", reading: "", meaning: "Boring",
-            notes: {
-                lesson: null,
-            }
+            main: "つまらない", reading: "", meaning: "Boring",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         nemui: {
-            main: "", reading: "", meaning: "Sleepy",
-            notes: {
-                lesson: null,
-            }
+            main: "ねむい", reading: "", meaning: "Sleepy",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         kowai: {
-            main: "", reading: "", meaning: "Frightening",
-            notes: {
-                lesson: null,
-            }
+            main: "こわい", reading: "", meaning: "Frightening",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         benrina: {
-            main: "", reading: "", meaning: "Convenient",
-            notes: {
-                lesson: null,
-            }
+            main: "べんりな", reading: "", meaning: "Convenient",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         taihenna: {
-            main: "", reading: "", meaning: "Tough (situation)",
-            notes: {
-                lesson: null,
-            }
+            main: "たいへんな", reading: "", meaning: "Tough (situation)",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         sabishii: {
-            main: "", reading: "", meaning: "Lonely",
-            notes: {
-                lesson: null,
-            }
+            main: "さびしいい", reading: "", meaning: "Lonely",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         kantanna: {
-            main: "", reading: "", meaning: "Easy; simple",
-            notes: {
-                lesson: null,
-            }
+            main: "かんたんな", reading: "", meaning: "Easy; simple",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
         muzukashii: {
-            main: "", reading: "", meaning: "Difficult",
-            notes: {
-                lesson: null,
-            }
+            main: "むずかしい", reading: "", meaning: "Difficult",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         sutekina: {
-            main: "", reading: "", meaning: "Nice",
-            notes: {
-                lesson: null,
-            }
+            main: "すてきな", reading: "", meaning: "Nice",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         tanoshii: {
-            main: "", reading: "", meaning: "Fun",
-            notes: {
-                lesson: null,
-            }
+            main: "たのしい", reading: "", meaning: "Fun",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         itai: {
-            main: "", reading: "", meaning: "Hurt; painful",
-            notes: {
-                lesson: null,
-            }
+            main: "いたい", reading: "", meaning: "Hurt; painful",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
 
@@ -99,102 +87,89 @@ export const adjectives = {
 
     description: {
         hayai: {
-            main: "", reading: "", meaning: "Early; fast",
-            notes: {
-                lesson: null,
-            }
+            main: "早い", reading: "はやい", meaning: "Early; fast",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
 
         shizukana: {
-            main: "", reading: "", meaning: "Quiet",
-            notes: {
-                lesson: null,
-            }
+            main: "しずかな", reading: "", meaning: "Quiet",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         nigiyakaa: {
-            main: "", reading: "", meaning: "Lively",
-            notes: {
-                lesson: null,
-            }
+            main: "にぎやかあな", reading: "", meaning: "Lively",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         genki: {
-            main: "", reading: "", meaning: "Healthy; energetic; fine",
-            notes: {
-                lesson: null,
-                usage: [
-                    "For mood and health, 元気 can mean fine."
-                ]
-            }
+            main: "元気な", reading: "げんきな", meaning: "Healthy; energetic; fine",
+
+            notes: [
+                {id: "lesson", value: ""},
+                {id: "usage", value: "For mood and health, 元気 can mean fine."
+                }
+            ]
         },
 
         kireina: {
-            main: "", reading: "", meaning: "Beautiful",
-            notes: {
-                lesson: null,
-                usage: [
-                    "Cannot be used with そうです ending."
+            main: "きれいな", reading: "", meaning: "Beautiful",
+            notes:  [
+                {id: "lesson", value: ""},
+                {id: "usage", value: "Cannot be used with そうです ending."}
                 ]
-            },
         },
 
             kawaii: {
-                main: "", reading: "", meaning: "Cute",
-                notes: {
-                    lesson: null,
-                }
+                main: "かわいい", reading: "", meaning: "Cute",
+                notes:  [
+                    {id: "lesson", value: ""}]
             },
 
         shinsetsuna: {
-            main: "", reading: "", meaning: "Kind",
-            notes: {
-                lesson:null ,
-            }
+            main: "しんせつな", reading: "", meaning: "Kind",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         ijiwaruna: {
-            main: "", reading: "", meaning: "Mean-spirited",
-            notes: {
-                lesson:null ,
-            }
+            main: "いじわるな", reading: "", meaning: "Mean-spirited",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         wakai: {
-            main: "", reading: "", meaning: "Young",
-            notes: {
-                lesson:null ,
-            }
+            main: "わかい", reading: "", meaning: "Young",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
         atamagaii: {
-            main: "", reading: "", meaning: "Bright; smart; clever",
-            notes: {
-                lesson:null ,
-            }
+            main: "あたまがいい", reading: "", meaning: "Bright; smart; clever",
+            notes:  [
+                {id: "lesson", value: ""}]
         },
 
     },
 
         colors: {
             aka: {
-                main: "赤い", reading: "あかい",
-                notes: {
-                    lesson: null,
-                }
+                main: "赤い", reading: "あかい", meaning: "Red",
+                notes:  [
+                    {id: "lesson", value: ""}]
             },
             aoi: {
-                main: "青い", reading: "あおい",
-                notes: {
-                    lesson: null,
-                }
+                main: "青い", reading: "あおい", meaning: "Blue",
+                notes:  [
+                    {id: "lesson", value: ""}]
             },
             shiro: {
-                main: "白い", reading: "しろい",
-                notes: {
-                    lesson: null,
-                }
+                main: "白い", reading: "しろい", meaning: "White",
+                notes:  [
+                    {id: "lesson", value: ""}]
             },
         },
 }

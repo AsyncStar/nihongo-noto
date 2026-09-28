@@ -1,0 +1,216 @@
+* {
+
+    box-sizing: border-box;
+
+    --main-font-family: Zen Kaku Gothic New, sans-serif;
+    --jpn-font-size: 18px;
+
+    --quick-access-font-size: 0.711em;
+    --conjugator-result-font-size: 40px;
+    --inspector-font-size: 1.5em;
+    --reading-font-size: 0.7em;
+    --meaning-font-size: 0.95em;
+
+
+    --light-bg-color: #fff5e9;
+    --light-neutral-color: #fffbf2;
+    --dark-neutral-color: #7a5636;
+    --mid-neutral-color: #f4ae08;
+    --primary-color: #ffd071;
+    --secondary-color: #b5d8ff;
+
+    --primary-accent-color: rgba(255, 183, 111, 0.94);
+    --secondary-accent-color: #84bcff;
+
+}
+
+body {
+    font-family: var(--main-font-family), sans-serif;
+    background-color: var(--light-bg-color);
+}
+
+.title {
+    margin: 0;
+    border: 1px solid black;
+    height: fit-content;
+    font-size: 2.3em;
+
+    .main {
+        text-wrap: wrap;
+        text-align: center;
+    }
+
+    .inline {
+        margin: 0;
+        display: inline-block;
+    }
+
+}
+
+
+/*  ============= TILE STYLING ============= */
+
+.tile {
+    display: inline-block;
+    border: 0.1em solid rgba(97, 97, 97, 0.19);
+    border-radius: 0.3em;
+    margin: 0.2em;
+    text-wrap: nowrap;
+    font-size: 3em;
+    height: fit-content;
+
+
+}
+
+/*  ============= TAB STYLING ============= */
+
+.tabs {
+    list-style: none;
+    padding: 0;
+    cursor: pointer;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    height: 90px;
+    overflow: scroll;
+
+
+    li {
+        display: inline-block;
+        height: 54px;
+        width: fit-content;
+        text-wrap: wrap;
+        margin: 0.18em;
+
+        text-decoration: none;
+        color: #000000;
+        padding: 0.1em;
+        transition: all .2s ease-in-out;
+        font-size: 2em;
+    }
+
+}
+
+.tab.active {
+        background-color: var(--secondary-accent-color);
+}
+
+.tab:hover {
+    border-bottom: 5px solid var(--secondary-accent-color);
+
+}
+
+.tab-section .destination {
+    border: 2px solid rgba(0, 0, 0, 0.16);
+    height: 200px;
+    overflow: scroll;
+}
+
+#timeDest {
+    height: 100px;
+}
+
+/*  ============= MODAL STYLING ============= */
+#tile-modal {
+    z-index: 100;
+    border-radius: 0.5em;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: none;
+    width: 70%;
+    height: 50%;
+
+
+}
+
+#tile-modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#tile-modal:focus {
+    outline: 6px solid #fecc64;
+
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 50px;
+}
+
+.modal-header {
+    font-size: 80px;
+
+    @media (max-width: 600px) {
+        font-size: 40px;
+        text-wrap: nowrap;
+    }
+}
+
+
+/*  ============= RESPONSIVE STYLING ============= */
+
+/* For half of a laptop scree, looks okay for full screen too*/
+@media (min-width: 400px) and (max-height: 600px) {
+
+    .title {
+        font-size: 10px;
+    }
+
+    .tile {
+        font-size: 15px;
+
+    }
+
+    .tabs {
+        height: 40px;
+        overflow: scroll;
+
+
+        li {
+            height: 15px;
+            width: fit-content;
+            text-wrap: wrap;
+            margin: 0.18em;
+
+            font-size: 10px;
+        }
+
+    }
+
+    .tab-section .destination {
+        border: 2px solid rgba(0, 0, 0, 0.16);
+        height: 70px;
+        overflow: scroll;
+    }
+
+    #timeDest {
+        height: 30px;
+    }
+
+    .wrapper {
+        display: flex;
+
+        .tab-section {
+            flex: 1;
+        }
+    }
+
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        font-size: 13px;
+    }
+
+    .modal-header {
+        font-size: 20px;
+
+        @media (max-width: 600px) {
+            font-size: 40px;
+            text-wrap: nowrap;
+        }
+    }
+
+}
