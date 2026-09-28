@@ -4,12 +4,12 @@ A personal note site for my Japanese class. Goal is to fit as much information a
 
 To do 
 #### [ ] Finish transferring old vocab data
-- - [ x] Nouns
-  - [x ] Adjectives
+- - [x] Nouns
+  - [x] Adjectives
   - [ ] Verbs
 #### Finishing adding new vocab data
 - - [ ] Kanji
-  - [x ] Adverbs
+  - [x] Adverbs
 #### Recent lessons data
 - - [ ] Lesson 13 Vocab
   - [ ] Lesson 13 Kanji
@@ -18,6 +18,6 @@ To do
   - [ ] Lesson 15 Vocab
   - [ ] Lesson 15 Kanji
 #### Pages 
-- [x ] Vocab page
+- [x] Vocab page
 - [ ] Kanji page
 - [ ] Grammar page
