@@ -13,11 +13,11 @@ To do
 #### Recent lessons data
 - - [ ] Lesson 13 Vocab
   - [ ] Lesson 13 Kanji
-  - [ ] Lesson 14 Vocab
-  - [ ] Lesson 14 Kanji
+  - [] Lesson 14 Vocab
+  - [x] Lesson 14 Kanji
   - [ ] Lesson 15 Vocab
   - [ ] Lesson 15 Kanji
 #### Pages 
 - [x] Vocab page
-- [ ] Kanji page
-- [ ] Grammar page
+- [x] Kanji page
+- [x] Grammar page

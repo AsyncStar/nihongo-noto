@@ -35,13 +35,14 @@ body {
     .app {
         text-wrap: wrap;
         text-align: center;
-        font-size: 3em;
+        font-size: 20px;
         background-color: var(--primary-color);
         color: var(--dark-accent-color);
+        width: 90px;
     }
 
     .topic {
-        font-size: 3em;
+        font-size: 30px;
         color: var(--dark-accent-color);
 
     }
@@ -55,7 +56,7 @@ body {
         background-color: var(--dark-accent-color);
         width: fit-content;
         height: fit-content;
-        padding: 1em;
+        padding: 0.3em;
         align-self: flex-end;
         margin-left: auto;
 
@@ -64,7 +65,7 @@ body {
         text-decoration: none;
         word-break: auto-phrase;
         color: white;
-        font-size: 2em;
+        font-size: 22px;
     }
 
 }
@@ -78,13 +79,13 @@ body {
     border-radius: 0.3em;
     margin: 0.2em;
     text-wrap: nowrap;
-    font-size: 3em;
+    font-size: 18px;
     height: fit-content;
 
 }
 .kanji-tile {
     padding: 0.06em;
-    font-size: 3.2em;
+    font-size: 25px;
     height: fit-content;
 
 }
@@ -104,13 +105,13 @@ body {
     cursor: pointer;
     flex-wrap: wrap;
     background-color: var(--primary-color);
-    height: 90px;
+    height: 40px;
     overflow: scroll;
-
+    margin-bottom: auto;
 
     li {
         display: inline-block;
-        height: 54px;
+        height: 32px;
         width: fit-content;
         text-wrap: wrap;
         margin: 0.18em;
@@ -119,7 +120,7 @@ body {
         color: #000000;
         padding: 0.1em;
         transition: all .2s ease-in-out;
-        font-size: 2em;
+        font-size: 12px;
     }
 
 }
@@ -133,15 +134,19 @@ body {
     border-bottom: 5px solid var(--secondary-color);
 
 }
-
+.tab-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
 .tab-section .destination {
     border: 2px solid rgba(0, 0, 0, 0.16);
-    height: 200px;
+    height: 85px;
     overflow: scroll;
 }
 
 #timeDest {
-    height: 100px;
+    height: 40px;
 }
 
 /*  ============= MODAL STYLING ============= */
@@ -158,6 +163,7 @@ body {
 
 #grammar-modal {
     height: 70%;
+    width: 80%;
 }
 #tile-modal::backdrop, #grammar-modal::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
@@ -171,12 +177,12 @@ body {
 .modal-content {
     display: flex;
     flex-direction: column;
-    gap: 1em;
-    font-size: 50px;
+    gap: 0.3em;
+    font-size: 20px;
 }
 
 .modal-header {
-    font-size: 80px;
+    font-size: 40px;
 
     @media (max-width: 600px) {
         font-size: 40px;
@@ -188,21 +194,22 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.3em;
+    overflow: scroll;
 
     /* row start / col start / row end / col end*/
 
     .top-wrapper {
         display: flex;
-        font-size: 50px;
+        font-size: 25px;
         border-bottom: 3px solid rgba(0, 0, 0, 0.06);
-        gap: 1em;
+        gap: 0.3em;
     }
 
     .bottom-wrapper {
         display: flex;
         flex-direction: column;
         gap: 0.7em;
-        font-size: 35px;
+        font-size: 16px;
     }
 
 
@@ -215,13 +222,13 @@ body {
     }
 
     .modal-notes {
-        font-size: 30px;
+        font-size: 14px;
     }
 
     .modal-follows {
         display: flex;
         flex-direction: column;
-        font-size: 30px;
+        font-size: 14px;
 
         .inline {
             display: inline-block;
@@ -230,7 +237,7 @@ body {
         }
 
         #followsWrapper {
-            gap: 1em;
+            gap: 0.2em;
         }
 
     }
@@ -247,43 +254,54 @@ body {
 .innerHeader {
     font-weight: bold;
     display: block;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 /* =============== KANJI BOX STYLING  ============= */
 .showcase {
     border: 1px solid black;
     width: 100%;
-    min-height: 250px;
+    min-height: 130px;
+    max-height: 130px;
     display: flex;
-    padding: 1em;
+    padding: 0.5em;
+    overflow: hidden;
 
     .large-kanji {
-        font-size: 90px;
+        font-size: 42px;
         text-align: center;
     }
 
+    .meaning {
+        text-align: center;
+        line-break: auto;
+        white-space: wrap;
+        font-size: 10px;
+        margin-bottom: auto;
+    }
     .wrapper {
         display: flex;
         flex-direction: column;
-        font-size: 30px;
+        font-size: 13px;
         gap: 0.5em;
 
         .readings {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 1fr ;
             gap: 0.2em;
             text-align: center;
+            font-size: 14px;
+           height: 40px;
+            overflow: scroll;
         }
 
         span {
             border: 0.1em solid rgba(0, 0, 0, 0.1);
             padding: 0.08em;
+            height: fit-content;
         }
 
-        .meaning {
-            text-align: center;
-        }
+
     }
 
 }
@@ -339,12 +357,13 @@ body {
     }
 
     .kanji-tile {
-        font-size: 20px;
+        font-size: 13px;
 
     }
 
+
     .tabs {
-        height: 40px;
+        height: 60px;
         overflow: scroll;
 
 
@@ -360,9 +379,21 @@ body {
     }
 
     .tab-section .destination {
-        border: 2px solid rgba(0, 0, 0, 0.16);
-        height: 70px;
+        border: 1px solid rgba(0, 0, 0, 0.16);
+        height: 100px;
         overflow: scroll;
+
+    }
+
+    .kanji-page {
+        .tabs {
+            height: 30px;
+        }
+
+        .tab-section .destination {
+            min-height: 50px;
+            max-height: 50px;
+        }
     }
 
     #timeDest {
@@ -434,7 +465,7 @@ body {
         margin-bottom: 0;
     }
 
-    .showcase {
+    .kanji-section {
         width: 100%;
         min-height: 70px;
         padding: 0.5em;
@@ -458,6 +489,11 @@ body {
             }
         }
 
+    }
+
+    .kanji-dest {
+        min-height: 60px;
+        max-height: 60px;
     }
 
 }

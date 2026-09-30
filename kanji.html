@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NihongoNoto | Kanji</title>
+    <script src="./logic/index.js" type="module"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Kosugi+Maru&family=M+PLUS+1:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body data-page="kanji" class="kanji-page">
+
+<div id="title">
+    <h4 class="app inline">日本語<wbr></wbr>の<wbr></wbr>ノート</h4>
+    <h1 class="topic inline">漢字</h1>
+    <button class="link">
+        <a href="index.html">たんご</a>
+
+    </button>
+
+    <button class="link">
+        <a href="grammar.html">文法</a>
+
+    </button>
+
+</div>
+
+
+<div data-section="kanjiNotes" class="kanji-section">
+    <div class="tab-section">
+        <ul class="tabs">
+            <li class="tab active" data-path="kanji.l14Kanji">Lesson 14</li>
+        </ul>
+
+        <div class="destination"></div>
+    </div>
+
+    <div class="showcase">
+        <div class="kanji-wrapper">
+            <div class="meaning"></div>
+            <div class="large-kanji"></div>
+            <div class="wrapper">
+                <div class="readings"></div>
+            </div>
+        </div>
+        <div class="kanji-dest"></div>
+    </div>
+</div>
+
+
+<div data-section="kanjiNotes" class="kanji-section">
+    <div class="tab-section">
+        <ul class="tabs">
+            <li class="tab active" data-path="kanji.unsorted">Unsorted</li>
+        </ul>
+
+        <div class="destination"></div>
+    </div>
+
+    <div class="showcase">
+        <div class="kanji-wrapper">
+            <div class="meaning"></div>
+            <div class="large-kanji"></div>
+            <div class="wrapper">
+                <div class="readings"></div>
+            </div>
+        </div>
+        <div class="kanji-dest"></div>
+    </div>
+</div>
+
+<dialog id="tile-modal">
+    <div class="modal-content">
+        <div class="modal-header"></div>
+        <div class="modal-reading"></div>
+        <div class="modal-meaning"></div>
+        <div class="modal-notes"></div>
+    </div>
+</dialog>
+
+</body>
+</html>

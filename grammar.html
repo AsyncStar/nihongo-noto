@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NihongoNoto | Grammar</title>
-    <script src="logic/index.js" type="module"></script>
+    <script src="./logic/index.js" type="module"></script>
     <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,8 +22,29 @@
 
     </button>
 
+    <button class="link">
+        <a href="kanji.html">漢字</a>
+
+    </button>
+
 </div>
 
+<div data-section="vocab">
+
+<div class="tab-section">
+    <ul class="tabs">
+        <li class="tab active" data-path="time.timesOfDay">Times of day</li>
+        <li class="tab" data-path="time.dayTemporalDeixis">Day words</li>
+        <li class="tab" data-path="time.weekTemporalDeixis">Week nouns</li>
+        <li class="tab" data-path="time.monthTemporalDeixis">Month words</li>
+        <li class="tab" data-path="time.yearTemporalDeixis">Year words</li>
+    </ul>
+
+    <div id="timeDest" class="destination">
+
+    </div>
+</div>
+</div>
 <div data-section="grammarNotes">
 <div class="tab-section">
     <ul class="tabs">
@@ -41,27 +63,6 @@
 </div>
 </div>
 
-<div data-section="kanjiNotes">
-<div class="tab-section">
-    <ul class="tabs">
-        <li class="tab active" data-path="kanji.l14Kanji">Lesson 14</li>
-        <li class="tab" data-path="kanji.unsorted">Unsorted</li>
-    </ul>
-
-    <div class="destination">T</div>
-</div>
-
-<div class="showcase">
-    <div>
-        <div class="large-kanji"></div>
-        <div class="wrapper">
-            <div class="readings"></div>
-            <div class="meaning"></div>
-        </div>
-    </div>
-    <div class="kanji-dest"></div>
-</div>
-</div>
 
 <dialog id="grammar-modal">
     <div id="grammar-modal-content">
