@@ -1,0 +1,277 @@
+{
+  "particles": {
+    "nara": {
+      "main": "なら",
+      "meaning": "Only",
+      "title": "Contrast/Limitation",
+      "format": "(noun) なら (predicate).",
+      "lesson": 13,
+      "notes": [
+        {
+          "id": 1,
+          "value": null
+        }
+      ]
+    }
+  },
+
+  "patterns": {
+    "timePatterns": {
+      "periodNiFrequency": {
+        "main": "^[二週]^に^[三回]^",
+        "meaning": "Use to express how often you do something within a period of time. ",
+        "title": "Frequency of events",
+        "format": "(unit of time) に (number)かい",
+        "lesson": 13,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": []
+      }
+    },
+
+    "uncertaintyPatterns": {
+      "soudesuLooksLike": {
+        "main": "(〜)そうです",
+        "meaning": "It looks like...",
+        "title": "It looks like...",
+        "format": "&[(statement)]& そうです",
+        "follows": [
+          "い-Adj: Drop い",
+          "いい-Adj: よさ",
+          "な-Adj: Drop な"
+        ],
+        "chainsWith": [],
+        "lesson": 13,
+        "notes": []
+      },
+
+      "kamoshiremasenMaybe": {
+        "main": "かもしれません",
+        "meaning": "Maybe",
+        "title": "It may be the case...",
+        "format": "(short form) かもしれません",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": []
+      },
+
+      "deshouGuessing": {
+        "main": "でしょう",
+        "meaning": "Probably / guessing",
+        "title": "",
+        "format": "",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": []
+      }
+    },
+
+    "statePatterns": {
+      "teIruProgressChange": {
+        "main": "ている",
+        "meaning": "",
+        "title": "",
+        "format": "〜ている",
+        "follows": [
+          "Verb: て-form"
+        ],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": []
+      },
+      "kotoGaAruHappenedEarlier": {
+        "main": "〜ことがある",
+        "meaning": "Happened earlier",
+        "title": "",
+        "format": "",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": []
+      },
+      "teMiruTrying": {
+        "main": "てみる",
+        "meaning": "",
+        "title": "",
+        "format": "(verb て-form) みる ",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": []
+      }
+    },
+
+    "advicePatterns": {
+      "daraDouDesuKaWhyDontYou": {
+        "main": "だらどうですか",
+        "meaning": "Why don't you...",
+        "title": "Giving advice",
+        "format": "&[verb (short,past)]& + らどうですか ",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": 14,
+        "notes": [
+          "May suggest a disapproving, criticizing or accusing tone. Avoid using unless explicitly asked for advice.",
+          "Not to be used for extending invitations. Use ませんか instead."
+        ]
+      },
+      "dahougaiidesuBetterDo": {
+        "main": "だほうがいいです",
+        "meaning": "It's better to do...",
+        "title": "",
+        "format": "だ ほうがいいです",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": [
+        ]
+      },
+      "naihouidesBetterNot": {
+        "main": "ないほういです",
+        "meaning": "It's better not to do...",
+        "title": "",
+        "format": "ないほうです",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": [
+        ]
+      }
+    },
+
+    "countingPatterns": {
+      "countingPeopleInAPlace": {
+        "main": "^〜^には^〜^が^〜^人います。",
+        "meaning": "There are N number of X people in Y place.",
+        "title": "Counting People",
+        "format": "&(Place)&には&(person desc)&が&(number)&人います。",
+        "follows": [
+        ],
+        "chainsWith": [],
+        "lesson": 8,
+        "notes": [
+          "Counting people is mostly just number + 人(にん), except for 一人 (ひとり) and 二人 (ふたり)."
+        ]
+      },
+      "moAsMany": {
+        "main": "^[八つ]^も",
+        "meaning": "As many as...",
+        "title": "As many as...",
+        "format": "(noun) が/を (number)(counter)も",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": 14,
+        "notes": []
+      },
+      "shikaAsFew": {
+        "main": "^[一つ]^しか",
+        "meaning": "",
+        "title": "",
+        "format": "(noun) が/を (number)(counter)しか",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": 14,
+        "notes": [
+          {
+            "id": 1,
+            "value": null
+          }
+        ]
+      }
+    },
+
+    "desirePatterns": {
+      "mashouLets": {
+        "main": "ましょう（か）",
+        "meaning": "Let's/Let me do...",
+        "title": "",
+        "format": "",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": []
+      },
+      "verbVolitionalFormLets": {
+        "main": "^食べよう^ (か）",
+        "meaning": "Let's do...",
+        "title": "",
+        "format": "",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": [
+          "Casual version of ましょう"
+        ]
+      },
+      "tsumoridesuIntend": {
+        "main": "つもりです",
+        "meaning": "Intend to do...",
+        "title": "",
+        "format": "",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": []
+      },
+      "tsumoriDeshitaDontIntend": {
+        "main": "つもりでした",
+        "meaning": "Intend not to do...",
+        "title": "",
+        "format": "",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": []
+      },
+      "taiWant": {
+        "main": "たい",
+        "meaning": "Want to do...",
+        "title": "",
+        "format": "",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": []
+      },
+      "hoshiiWant": {
+        "main": "ほしい",
+        "meaning": "Want (thing)",
+        "title": "",
+        "format": "",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": 14,
+        "notes": []
+      }
+    },
+
+    "descriptionPatterns": {
+      "XYLocation": {
+        "main": "^私^は^前^のです",
+        "meaning": "X is (location word) Y.",
+        "title": "Where things are",
+        "format": "〜ている",
+        "follows": [
+        ],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": []
+      },
+
+      "ABodyPartAdjective": {
+        "main": "^あきさん^は^かみ^が^長いです.",
+        "meaning": "A's body part is (adjective).",
+        "title": "Describing Appearance",
+        "format": "Aさんは(body part)が(adjective)...",
+        "follows": [
+        ],
+        "chainsWith": [],
+        "lesson": null,
+        "notes": []
+      }
+
+    }
+  }
+}

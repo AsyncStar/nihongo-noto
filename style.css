@@ -12,15 +12,12 @@
     --meaning-font-size: 0.95em;
 
 
-    --light-bg-color: #fff5e9;
+    --light-bg-color: #f3f0e8;
     --light-neutral-color: #fffbf2;
-    --dark-neutral-color: #7a5636;
-    --mid-neutral-color: #f4ae08;
-    --primary-color: #ffd071;
-    --secondary-color: #b5d8ff;
+    --dark-accent-color: #425a36;
 
-    --primary-accent-color: rgba(255, 183, 111, 0.94);
-    --secondary-accent-color: #84bcff;
+    --primary-color: #b0ba9d;;
+    --secondary-color: #496a49;
 
 }
 
@@ -29,15 +26,24 @@ body {
     background-color: var(--light-bg-color);
 }
 
-.title {
+#title {
     margin: 0;
-    border: 1px solid black;
-    height: fit-content;
-    font-size: 2.3em;
 
-    .main {
+    height: fit-content;
+    display: flex;
+
+    .app {
         text-wrap: wrap;
         text-align: center;
+        font-size: 3em;
+        background-color: var(--primary-color);
+        color: var(--dark-accent-color);
+    }
+
+    .topic {
+        font-size: 3em;
+        color: var(--dark-accent-color);
+
     }
 
     .inline {
@@ -45,22 +51,50 @@ body {
         display: inline-block;
     }
 
+    button {
+        background-color: var(--dark-accent-color);
+        width: fit-content;
+        height: fit-content;
+        padding: 1em;
+        align-self: flex-end;
+        margin-left: auto;
+
+    }
+    a {
+        text-decoration: none;
+        word-break: auto-phrase;
+        color: white;
+        font-size: 2em;
+    }
+
 }
 
 
 /*  ============= TILE STYLING ============= */
 
-.tile {
+.tile, .kanji-tile {
     display: inline-block;
-    border: 0.1em solid rgba(97, 97, 97, 0.19);
+    border: 0.1em solid rgba(82, 94, 60, 0.36);
     border-radius: 0.3em;
     margin: 0.2em;
     text-wrap: nowrap;
     font-size: 3em;
     height: fit-content;
 
+}
+.kanji-tile {
+    padding: 0.06em;
+    font-size: 3.2em;
+    height: fit-content;
 
 }
+
+
+
+.highlight {
+    color: #fd3adb;
+}
+
 
 /*  ============= TAB STYLING ============= */
 
@@ -91,11 +125,12 @@ body {
 }
 
 .tab.active {
-        background-color: var(--secondary-accent-color);
+        background-color: var(--secondary-color);
+    color: #e8e8e8;
 }
 
 .tab:hover {
-    border-bottom: 5px solid var(--secondary-accent-color);
+    border-bottom: 5px solid var(--secondary-color);
 
 }
 
@@ -110,7 +145,7 @@ body {
 }
 
 /*  ============= MODAL STYLING ============= */
-#tile-modal {
+#tile-modal, #grammar-modal {
     z-index: 100;
     border-radius: 0.5em;
     justify-content: center;
@@ -119,16 +154,17 @@ body {
     border: none;
     width: 70%;
     height: 50%;
-
-
 }
 
-#tile-modal::backdrop {
+#grammar-modal {
+    height: 70%;
+}
+#tile-modal::backdrop, #grammar-modal::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#tile-modal:focus {
-    outline: 6px solid #fecc64;
+#tile-modal:focus, #grammar-modal:focus, #grammar-modal:focus {
+    outline: 10px solid #b0ba9d;
 
 }
 
@@ -148,18 +184,162 @@ body {
     }
 }
 
+#grammar-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+
+    /* row start / col start / row end / col end*/
+
+    .top-wrapper {
+        display: flex;
+        font-size: 50px;
+        border-bottom: 3px solid rgba(0, 0, 0, 0.06);
+        gap: 1em;
+    }
+
+    .bottom-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7em;
+        font-size: 35px;
+    }
+
+
+    .modal-title {
+        flex: 4;
+    }
+
+    .modal-lesson {
+        flex: 1;
+    }
+
+    .modal-notes {
+        font-size: 30px;
+    }
+
+    .modal-follows {
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+
+        .inline {
+            display: inline-block;
+            text-wrap: nowrap;
+
+        }
+
+        #followsWrapper {
+            gap: 1em;
+        }
+
+    }
+
+
+}
+
+
+.format-styling {
+    color: deeppink;
+    font-weight: bold;
+}
+
+.innerHeader {
+    font-weight: bold;
+    display: block;
+    font-size: 40px;
+}
+
+/* =============== KANJI BOX STYLING  ============= */
+.showcase {
+    border: 1px solid black;
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    padding: 1em;
+
+    .large-kanji {
+        font-size: 90px;
+        text-align: center;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        font-size: 30px;
+        gap: 0.5em;
+
+        .readings {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.2em;
+            text-align: center;
+        }
+
+        span {
+            border: 0.1em solid rgba(0, 0, 0, 0.1);
+            padding: 0.08em;
+        }
+
+        .meaning {
+            text-align: center;
+        }
+    }
+
+}
+
+.active-kanji {
+    background-color: var(--dark-accent-color);
+    color: var(--light-bg-color)
+
+}
+
 
 /*  ============= RESPONSIVE STYLING ============= */
 
 /* For half of a laptop scree, looks okay for full screen too*/
-@media (min-width: 400px) and (max-height: 600px) {
+@media (min-width: 300px) and (max-height: 600px) {
 
-    .title {
-        font-size: 10px;
+    #title {
+        font-size: 20px;
+
+        .app {
+            font-size: 15px;
+            word-break: auto-phrase;
+            width: 70px;
+        }
+
+        .topic {
+            font-size: 30px;
+        }
+
+        button {
+            background-color: var(--dark-accent-color);
+            width: fit-content;
+            height: fit-content;
+            padding: 0.2em;
+            align-self: flex-end;
+            margin-left: auto;
+
+        }
+        a {
+            text-decoration: none;
+            word-break: auto-phrase;
+            color: white;
+            font-size: 20px;
+
+        }
+
     }
+
 
     .tile {
         font-size: 15px;
+
+    }
+
+    .kanji-tile {
+        font-size: 20px;
 
     }
 
@@ -211,6 +391,73 @@ body {
             font-size: 40px;
             text-wrap: nowrap;
         }
+    }
+
+    #grammar-modal {
+        height: 80%;
+        width: 60%;
+    }
+    #grammar-modal-content {
+        .top-wrapper {
+            display: flex;
+            font-size: 20px;
+            gap: 0.1em;
+        }
+
+        .bottom-wrapper {
+            gap: 0.2em;
+            font-size: 15px;
+        }
+
+
+
+        .modal-notes {
+            font-size: 12px;
+        }
+
+        .modal-follows {
+            font-size: 12px;
+
+            #followsWrapper {
+                gap: 0.8em;
+                overflow: scroll
+            }
+
+        }
+    }
+
+    .innerHeader {
+
+        font-weight: bold;
+
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .showcase {
+        width: 100%;
+        min-height: 70px;
+        padding: 0.5em;
+
+        .large-kanji {
+            font-size: 20px;
+        }
+
+        .wrapper {
+            font-size: 10px;
+            gap: 0.5em;
+
+            .readings {
+                gap: 0.2em;
+                text-align: center;
+            }
+
+            span {
+                border: 0.1em solid rgba(0, 0, 0, 0.1);
+                padding: 0.08em;
+            }
+        }
+
     }
 
 }

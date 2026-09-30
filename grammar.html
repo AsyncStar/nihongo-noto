@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NihongoNoto | Grammar</title>
+    <script src="logic/index.js" type="module"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Kosugi+Maru&family=M+PLUS+1:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body data-page="grammar">
+
+<div id="title">
+    <h4 class="app inline">日本語<wbr></wbr>の<wbr></wbr>ノート</h4>
+    <h1 class="topic inline">文法</h1>
+    <button class="link">
+        <a href="index.html">たんご</a>
+
+    </button>
+
+</div>
+
+<div data-section="grammarNotes">
+<div class="tab-section">
+    <ul class="tabs">
+        <li class="tab active" data-path="patterns.advicePatterns">Advice</li>
+        <li class="tab" data-path="patterns.uncertaintyPatterns">Uncertainty</li>
+        <li class="tab" data-path="patterns.statePatterns">State</li>
+        <li class="tab" data-path="patterns.desirePatterns">Desire</li>
+        <li class="tab" data-path="patterns.timePatterns">Time</li>
+        <li class="tab" data-path="patterns.countingPatterns">Counting</li>
+    </ul>
+
+    <div class="destination">
+
+    </div>
+
+</div>
+</div>
+
+<div data-section="kanjiNotes">
+<div class="tab-section">
+    <ul class="tabs">
+        <li class="tab active" data-path="kanji.l14Kanji">Lesson 14</li>
+        <li class="tab" data-path="kanji.unsorted">Unsorted</li>
+    </ul>
+
+    <div class="destination">T</div>
+</div>
+
+<div class="showcase">
+    <div>
+        <div class="large-kanji"></div>
+        <div class="wrapper">
+            <div class="readings"></div>
+            <div class="meaning"></div>
+        </div>
+    </div>
+    <div class="kanji-dest"></div>
+</div>
+</div>
+
+<dialog id="grammar-modal">
+    <div id="grammar-modal-content">
+        <div class="top-wrapper">
+            <div class="modal-title">Title</div>
+            <div class="modal-lesson">Lesson</div>
+
+        </div>
+        <div class="bottom-wrapper">
+            <div class="modal-format">Format</div>
+            <div class="modal-meaning">Meaning</div>
+            <div class="modal-follows">
+                <span class="innerHeader">Follows...</span> <br>
+                <div id="followsWrapper"></div>
+            </div>
+            <div class="modal-chaining">
+                <span class="innerHeader">Can be followed by...</span> <br>
+                <div id="chainsWrapper"></div>
+            </div>
+            <div class="modal-notes"></div>
+        </div>
+    </div>
+
+</dialog>
+
+<dialog id="tile-modal">
+    <div class="modal-content">
+        <div class="modal-header"></div>
+        <div class="modal-reading"></div>
+        <div class="modal-meaning"></div>
+        <div class="modal-notes"></div>
+    </div>
+</dialog>
+
+
+
+</body>
+</html>
