@@ -1,19 +1,467 @@
 {
-  "particles": {
-    "nara": {
-      "main": "なら",
-      "meaning": "Only",
-      "title": "Contrast/Limitation",
-      "format": "(noun) なら (predicate).",
-      "lesson": 13,
-      "notes": [
-        {
-          "id": 1,
-          "value": null
-        }
-      ]
+  "general": {
+    "particles": {
+      "nara": {
+        "main": "なら",
+        "meaning": "Only",
+        "title": "Contrast/Limitation",
+        "format": "&(noun phrase)& なら &(predicate)&.",
+        "lesson": 13,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "woObject": {
+        "main": "を",
+        "meaning": "Object",
+        "title": "",
+        "format": "&(noun phrase)& を &(verb phrase)&.",
+        "lesson": 13,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "gaEmphasis": {
+        "main": "が",
+        "meaning": "Subject; emphasis",
+        "title": "",
+        "format": "&(phrase)& が &〜&.",
+        "lesson": 13,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "deMeansDirection": {
+        "main": "が",
+        "meaning": "Means of (tool) or direction",
+        "title": "",
+        "format": "&(location/tool)& が &〜&.",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "niLocationTime": {
+        "main": "に",
+        "meaning": "Location or direct time",
+        "title": "",
+        "format": "&(noun phrase)& に &〜&.",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "heDirection": {
+        "main": "へ",
+        "meaning": "Direction",
+        "title": "",
+        "format": "&(noun phrase)& へ &〜&.",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "toWithAnd": {
+        "main": "と",
+        "meaning": "Object",
+        "title": "",
+        "format": "&(noun)& と &〜&.",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "madeToUntil": {
+        "main": "まで",
+        "meaning": "To; until; as far as",
+        "title": "",
+        "format": "&(time/place)& まで &(verb phrase)&.",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "karaFrom": {
+        "main": "から",
+        "meaning": "From time/place",
+        "title": "",
+        "format": "&(Time/place)& から &〜&.",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      }
+    },
+    "aSoKo": {
+      "koreThis": {
+        "main": "これ",
+        "meaning": "This",
+        "title": "This (closer to speaker)",
+        "format": "これは &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "soreThat": {
+        "main": "それ",
+        "meaning": "That",
+        "title": "That (closer to listener)",
+        "format": "それは &〜& ",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "areThat": {
+        "main": "あれ",
+        "meaning": "That over there",
+        "title": "That (far away)",
+        "format": "あれは &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "konoThisThing": {
+        "main": "この",
+        "meaning": "This thing",
+        "title": "This thing (near me)",
+        "format": "この &(noun)& は &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "sonoThatThing": {
+        "main": "その",
+        "meaning": "That thing",
+        "title": "That thing (near listener)",
+        "format": "その &(noun)& は &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "anoThisThing": {
+        "main": "の",
+        "meaning": "This thing",
+        "title": "This thing (near me)",
+        "format": "この &(noun)& は &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "kokoHere": {
+        "main": "ここ",
+        "meaning": "Here",
+        "title": "Here (closer to speaker)",
+        "format": "ここ &(flexible)& &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [
+          "は - Location as topic of sentence",
+          "に - Where something exists or direction of arrival",
+          "へ・に - Movement towards location",
+          "で - Where something takes place",
+          "から・まで - From/to location",
+          "の - This/that (noun) here"
+        ],
+        "notes": [
+        ]
+      },
+      "sokoThere": {
+        "main": "そこ",
+        "meaning": "There",
+        "title": "There (closer to listener)",
+        "format": "そこ &(flexible)& &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [
+          "は - Location as topic of sentence",
+          "に - Where something exists or direction of arrival",
+          "へ・に - Movement towards location",
+          "で - Where something takes place",
+          "から・まで - From/to location",
+          "の - This/that (noun) here"
+        ],
+        "notes": [
+        ]
+      },
+      "asokoOverThere": {
+        "main": "あそこ",
+        "meaning": "Over there",
+        "title": "There (far away)",
+        "format": "あこ &(flexible)& &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [
+          "は - Location as topic of sentence",
+          "に - Where something exists or direction of arrival",
+          "へ・に - Movement towards location",
+          "で - Where something takes place",
+          "から・まで - From/to location",
+          "の - This/that (noun) here"
+        ],
+        "notes": [
+        ]
+      }
+    },
+    "positionWords": {
+      "migiRight": {
+        "main": "右",
+        "meaning": "Right",
+        "title": "右 |　Where things are ",
+        "format": "&(reference place)& の右 &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "hidariLeft": {
+        "main": "左",
+        "meaning": "Left",
+        "title": "左 |　Where things are",
+        "format": "&(reference place)& の左 &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "maeFront": {
+        "main": "前",
+        "meaning": "Front",
+        "title": "前 |　Where things are",
+        "format": "&(reference place)& の前 &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "ushiroBack": {
+        "main": "後ろ",
+        "meaning": "Back",
+        "title": "後ろ |　Where things are",
+        "format": "&(reference place)& の後ろ &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "nakaInside": {
+        "main": "中",
+        "meaning": "Inside",
+        "title": "Where things are",
+        "format": "&(reference place)& の中 &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "ueOn": {
+        "main": "上",
+        "meaning": "On",
+        "title": "上 |　Where things are",
+        "format": "&(reference place)& の上 &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "shitaUnder": {
+        "main": "下",
+        "meaning": "Under",
+        "title": "下 |　Where things are",
+        "format": "&(reference place)& の下 &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "chikakuNear": {
+        "main": "近く",
+        "meaning": "Near",
+        "title": "近く |　Where things are",
+        "format": "&(reference place)& の近く &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "tonariNext": {
+        "main": "となり",
+        "meaning": "This",
+        "title": "となり | Where things are",
+        "format": "&(reference place)& のとなり &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      },
+      "aidaBetween": {
+        "main": "間",
+        "meaning": "Between",
+        "title": "間 | Where things are",
+        "format": "&(A) と &(B)& 間 &〜&",
+        "lesson": null,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": [
+        ]
+      }
+    },
+    "questionWords": {
+      "naniWhat": {
+        "main": "何",
+        "meaning": "What",
+        "title": "何 |　What",
+        "format": "See below",
+        "lesson": 1,
+        "preceding": [
+          "To chain complex indefinite word phrases, think about where the answer would be in a sentence."
+        ],
+        "chainsWith": [
+          "が - What (is/does)",
+          "から - From what",
+          "で - With/by what",
+          "を - What (object)",
+          "に - To/for what"
+        ],
+        "notes": [
+
+        ]
+      },
+      "ikuraHowMuch": {
+        "main": "いくら",
+        "meaning": "How much",
+        "title": "いくら |　How much",
+        "format": "",
+        "lesson": 2,
+        "preceding": [
+        ],
+        "chainsWith": [
+        ],
+        "notes": [
+
+        ]
+      },
+      "doudesukaHowAbout": {
+        "main": "どうですか",
+        "meaning": "How about?",
+        "title": "どうですか | How about?",
+        "format": "",
+        "lesson": 10,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": []
+      },
+
+      "doushiteWhy": {
+        "main": "どうして",
+        "meaning": "Why?",
+        "title": "どうして | Why?",
+        "format": "",
+        "lesson": 4,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": []
+      },
+
+      "donnaWhatKindOf": {
+        "main": "どんな",
+        "meaning": "What kind of?",
+        "title": "どんな | What kind of?",
+        "format": "",
+        "lesson": 5,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": []
+      },
+
+      "hondoudesukaReally": {
+        "main": "ほんどうですか",
+        "meaning": "Really?",
+        "title": "ほんどうですか | Really?",
+        "format": "",
+        "lesson": 6,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": []
+      },
+
+      "douHow": {
+        "main": "どう",
+        "meaning": "How",
+        "title": "どう | How",
+        "format": "",
+        "lesson": 8,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": []
+      },
+
+      "docchidotiraWhich": {
+        "main": "どっち・どちら",
+        "meaning": "Which",
+        "title": "どっち・どちら | Which",
+        "format": "",
+        "lesson": 10,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": []
+      },
+
+      "douyatteHowByWhatMeans": {
+        "main": "どうやって",
+        "meaning": "How; by what means",
+        "title": "どうやって | How; by what means",
+        "format": "",
+        "lesson": 10,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": []
+      },
+
+      "donokuraiHowMuchHowLong": {
+        "main": "どのくらい",
+        "meaning": "How much; how long",
+        "title": "どのくらい | How much; how long",
+        "format": "",
+        "lesson": 10,
+        "preceding": [],
+        "chainsWith": [],
+        "notes": []
+      }
     }
   },
+
+
+
 
   "patterns": {
     "timePatterns": {
@@ -98,6 +546,23 @@
         "format": "(verb て-form) みる ",
         "follows": [],
         "chainsWith": [],
+        "lesson": null,
+        "notes": []
+      },
+      "naruToBecome": {
+        "main": "なる",
+        "meaning": "",
+        "title": "",
+        "format": "&(flexible)& みる ",
+        "follows": [
+          "い-adj: Drop い, add く",
+          "な-adj: Drop な, add  に",
+          "Nouns: Add に"
+        ],
+        "chainsWith": [
+          "て-form -> 来る To mean a more gradual becoming than なる・なります",
+          "&X& 前より  &〜(topic)& に なる -> X has become (topic) than before."
+        ],
         "lesson": null,
         "notes": []
       }

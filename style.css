@@ -85,7 +85,7 @@ body {
 }
 .kanji-tile {
     padding: 0.06em;
-    font-size: 25px;
+    font-size: 17px;
     height: fit-content;
 
 }
@@ -190,6 +190,10 @@ body {
     }
 }
 
+#grammar-modal {
+    overflow-y: scroll;
+}
+
 #grammar-modal-content {
     display: flex;
     flex-direction: column;
@@ -260,7 +264,7 @@ body {
 /* =============== KANJI BOX STYLING  ============= */
 .showcase {
     border: 1px solid black;
-    width: 100%;
+    width: 50%;
     min-height: 130px;
     max-height: 130px;
     display: flex;
@@ -268,7 +272,7 @@ body {
     overflow: hidden;
 
     .large-kanji {
-        font-size: 42px;
+        font-size: 35px;
         text-align: center;
     }
 
