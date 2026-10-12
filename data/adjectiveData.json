@@ -7,36 +7,30 @@
       "lesson": null,
       "notes": []
     },
-
     "tsumaranai": {
       "main": "つまらない", "reading": "",
       "meaning": "Boring",
       "lesson": null,
       "notes": []
     },
-
     "nemui": {
       "main": "ねむい", "reading": "",
       "meaning": "Sleepy",
       "lesson": null,
       "notes": []
     },
-
     "kowai": {
       "main": "こわい", "reading": "",
       "meaning": "Frightening",
       "lesson": null,
       "notes": []
     },
-
     "benrina": {
       "main": "べんりな", "reading": "",
       "meaning": "Convenient",
       "lesson": null,
       "notes": []
     },
-
-
     "taihenna": {
       "main": "たいへんな", "reading": "",
       "meaning": "Tough (situation)",
@@ -44,8 +38,6 @@
       "notes": [
       ]
     },
-
-
     "sabishii": {
       "main": "さびしいい", "reading": "",
       "meaning": "Lonely",
@@ -53,7 +45,6 @@
       "notes": [
       ]
     },
-
     "kantanna": {
       "main": "かんたんな", "reading": "",
       "meaning": "Easy; simple",
@@ -61,7 +52,6 @@
       "notes": [
       ]
     },
-
     "muzukashii": {
       "main": "むずかしい", "reading": "",
       "meaning": "Difficult",
@@ -69,7 +59,6 @@
       "notes": [
       ]
     },
-
     "sutekinaNice": {
       "main": "すてきな", "reading": "",
       "meaning": "Nice",
@@ -77,21 +66,17 @@
       "notes": [
       ]
     },
-
-
     "tanoshiiFun": {
       "main": "たのしい", "reading": "",
       "meaning": "Fun",
       "lesson": null,
       "notes": []
     },
-
     "itaiHurt": {
       "main": "いたい", "reading": "",
       "meaning": "Hurt; painful",
       "notes": []
     },
-
     "hoshiiWant": {
       "main": "ほしい", "reading": "",
       "meaning": "To want",
@@ -99,7 +84,8 @@
       "notes": [
          "Use with (thing) が"
       ]
-    }
+    },
+
   },
 
   "description": {

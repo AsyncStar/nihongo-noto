@@ -461,15 +461,13 @@
   },
 
 
-
-
   "patterns": {
     "timePatterns": {
       "periodNiFrequency": {
-        "main": "^[二週]^に^[三回]^",
+        "main": "^二週^に^三回^",
         "meaning": "Use to express how often you do something within a period of time. ",
         "title": "Frequency of events",
-        "format": "(unit of time) に (number)かい",
+        "format": "&(unit of time)& に &(number)&回",
         "lesson": 13,
         "preceding": [],
         "chainsWith": [],
@@ -479,10 +477,10 @@
 
     "uncertaintyPatterns": {
       "soudesuLooksLike": {
-        "main": "(〜)そうです",
+        "main": "^〜^ そうです",
         "meaning": "It looks like...",
         "title": "It looks like...",
-        "format": "&[(statement)]& そうです",
+        "format": "&(statement)& そうです",
         "follows": [
           "い-Adj: Drop い",
           "いい-Adj: よさ",
@@ -494,10 +492,10 @@
       },
 
       "kamoshiremasenMaybe": {
-        "main": "かもしれません",
+        "main": "^〜^ かもしれません",
         "meaning": "Maybe",
         "title": "It may be the case...",
-        "format": "(short form) かもしれません",
+        "format": "&(short form)& かもしれません",
         "follows": [],
         "chainsWith": [],
         "lesson": null,
@@ -505,23 +503,48 @@
       },
 
       "deshouGuessing": {
-        "main": "でしょう",
-        "meaning": "Probably / guessing",
-        "title": "",
-        "format": "",
+        "main": "^〜^ でしょう",
+        "meaning": "It is probably. | It is (guess).",
+        "title": "Probably / guessing",
+        "format": "&(statement)& でしょう",
         "follows": [],
         "chainsWith": [],
         "lesson": null,
         "notes": []
+      },
+
+      "toitemasuQuote": {
+        "main": "^〜^ と言ってます",
+        "meaning": "They said...",
+        "title": "Quoting people",
+        "format": "&(statement short form)& と言ってます",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": 8,
+        "notes": [
+          "If you did not hear it directly, と言います is more appropriate."
+        ]
+      },
+      "tomoumasuIhink": {
+        "main": "^〜^ と思います",
+        "meaning": "I think that...",
+        "title": "Expressing thoughts",
+        "format": "&(statement short form)& と思います",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": 8,
+        "notes": [
+          ""
+        ]
       }
     },
 
     "statePatterns": {
       "teIruProgressChange": {
-        "main": "ている",
-        "meaning": "",
+        "main": "^〜^ ている",
+        "meaning": "Depending on verb. Either verb IN PROGRESS  (like sleeping) or result of verb CHANGE (like married).",
         "title": "",
-        "format": "〜ている",
+        "format": "&(statement)& ている",
         "follows": [
           "Verb: て-form"
         ],
@@ -530,7 +553,7 @@
         "notes": []
       },
       "kotoGaAruHappenedEarlier": {
-        "main": "〜ことがある",
+        "main": "^〜^ ことがある",
         "meaning": "Happened earlier",
         "title": "",
         "format": "",
@@ -540,20 +563,20 @@
         "notes": []
       },
       "teMiruTrying": {
-        "main": "てみる",
-        "meaning": "",
-        "title": "",
-        "format": "(verb て-form) みる ",
+        "main": "^〜^ てみる",
+        "meaning": "Trying to do...",
+        "title": "Trying",
+        "format": "&(verb て-form)& みる ",
         "follows": [],
         "chainsWith": [],
         "lesson": null,
         "notes": []
       },
       "naruToBecome": {
-        "main": "なる",
-        "meaning": "",
-        "title": "",
-        "format": "&(flexible)& みる ",
+        "main": "^〜^ なる",
+        "meaning": "To become...",
+        "title": "To become",
+        "format": "&(flexible)& なる ",
         "follows": [
           "い-adj: Drop い, add く",
           "な-adj: Drop な, add  に",
@@ -564,16 +587,18 @@
           "&X& 前より  &〜(topic)& に なる -> X has become (topic) than before."
         ],
         "lesson": null,
-        "notes": []
+        "notes": [
+          "なる is a ごだん / U verb."
+        ]
       }
     },
 
     "advicePatterns": {
       "daraDouDesuKaWhyDontYou": {
-        "main": "だらどうですか",
+        "main": "^〜^ だらどうですか",
         "meaning": "Why don't you...",
         "title": "Giving advice",
-        "format": "&[verb (short,past)]& + らどうですか ",
+        "format": "&verb (short,past)& + らどうですか ",
         "follows": [],
         "chainsWith": [],
         "lesson": 14,
@@ -583,7 +608,7 @@
         ]
       },
       "dahougaiidesuBetterDo": {
-        "main": "だほうがいいです",
+        "main": "^〜^ だほうがいいです",
         "meaning": "It's better to do...",
         "title": "",
         "format": "だ ほうがいいです",
@@ -594,7 +619,7 @@
         ]
       },
       "naihouidesBetterNot": {
-        "main": "ないほういです",
+        "main": "^〜^ ないほういです",
         "meaning": "It's better not to do...",
         "title": "",
         "format": "ないほうです",
@@ -607,6 +632,16 @@
     },
 
     "countingPatterns": {
+      "basicCountingFormat": {
+        "main": "^〜^ を・が ^# (counter)^",
+        "meaning": "As many as...",
+        "title": "As many as...",
+        "format": "&(noun)& が/を &(number)(counter)&",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": 14,
+        "notes": []
+      },
       "countingPeopleInAPlace": {
         "main": "^〜^には^〜^が^〜^人います。",
         "meaning": "There are N number of X people in Y place.",
@@ -620,36 +655,45 @@
           "Counting people is mostly just number + 人(にん), except for 一人 (ひとり) and 二人 (ふたり)."
         ]
       },
+      "dakeOnly": {
+        "main": "^二つ^だけ",
+        "meaning": "Only...",
+        "title": "Only...",
+        "format": "&(counting format)& だけ",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": 11,
+        "notes": [
+          "Implies you have as much as you need, but not more than that."
+        ]
+      },
       "moAsMany": {
-        "main": "^[八つ]^も",
+        "main": "^八つ^も",
         "meaning": "As many as...",
         "title": "As many as...",
-        "format": "(noun) が/を (number)(counter)も",
+        "format": "&(counting format)& も",
         "follows": [],
         "chainsWith": [],
         "lesson": 14,
         "notes": []
       },
       "shikaAsFew": {
-        "main": "^[一つ]^しか",
+        "main": "^一つ^しか",
         "meaning": "",
         "title": "",
-        "format": "(noun) が/を (number)(counter)しか",
+        "format": "&(counting format)& しか &(negative predicate)&",
         "follows": [],
         "chainsWith": [],
         "lesson": 14,
         "notes": [
-          {
-            "id": 1,
-            "value": null
-          }
+          "Implies you don't have enough."
         ]
       }
     },
 
     "desirePatterns": {
       "mashouLets": {
-        "main": "ましょう（か）",
+        "main": "^〜^ ましょう（か）",
         "meaning": "Let's/Let me do...",
         "title": "",
         "format": "",
@@ -659,7 +703,7 @@
         "notes": []
       },
       "verbVolitionalFormLets": {
-        "main": "^食べよう^ (か）",
+        "main": "^〜^ ^食べよう^ (か）",
         "meaning": "Let's do...",
         "title": "",
         "format": "",
@@ -671,7 +715,7 @@
         ]
       },
       "tsumoridesuIntend": {
-        "main": "つもりです",
+        "main": "^〜^ つもりです",
         "meaning": "Intend to do...",
         "title": "",
         "format": "",
@@ -681,7 +725,7 @@
         "notes": []
       },
       "tsumoriDeshitaDontIntend": {
-        "main": "つもりでした",
+        "main": "^〜^ つもりでした",
         "meaning": "Intend not to do...",
         "title": "",
         "format": "",
@@ -691,20 +735,23 @@
         "notes": []
       },
       "taiWant": {
-        "main": "たい",
+        "main": "^〜^ たいです",
         "meaning": "Want to do...",
-        "title": "",
-        "format": "",
+        "title": "Want to do",
+        "format": "&verb stem& たいです",
         "follows": [],
         "chainsWith": [],
-        "lesson": null,
-        "notes": []
+        "lesson": 11,
+        "notes": [
+          "To get verb step, drop ます。",
+          "Just drop です in short form."
+        ]
       },
       "hoshiiWant": {
         "main": "ほしい",
-        "meaning": "Want (thing)",
-        "title": "",
-        "format": "",
+        "meaning": "Want (X)",
+        "title": "Want (things)",
+        "format": "&X& が ほしい",
         "follows": [],
         "chainsWith": [],
         "lesson": 14,
@@ -714,29 +761,135 @@
 
     "descriptionPatterns": {
       "XYLocation": {
-        "main": "^私^は^前^のです",
-        "meaning": "X is (location word) Y.",
+        "main": "^X^ は ^Y^ の ^前^です",
+        "meaning": "X is (location word relative to) Y.",
         "title": "Where things are",
-        "format": "〜ている",
+        "format": "&X& は &Y& の (location word).",
         "follows": [
         ],
         "chainsWith": [],
-        "lesson": null,
+        "lesson": 4,
         "notes": []
       },
 
       "ABodyPartAdjective": {
-        "main": "^あきさん^は^かみ^が^長いです.",
+        "main": "^〜^ は ^かみ^ が ^長い^です",
         "meaning": "A's body part is (adjective).",
         "title": "Describing Appearance",
-        "format": "Aさんは(body part)が(adjective)...",
+        "format": "&Aさん& は &(body part)& が &(adjective)&...",
+        "follows": [
+        ],
+        "chainsWith": [],
+        "lesson": 7,
+        "notes": []
+      },
+
+      "relativeLocation": {
+        "main": "^〜^は^あそこ^です",
+        "meaning": "X is there/over there. | Where is X?.",
+        "title": "Where things are (relative)",
+        "format": "&X& は &(こ-series)& です (か if どこ).",
         "follows": [
         ],
         "chainsWith": [],
         "lesson": null,
+        "notes": [
+          "See こ-series in あそこ tab."
+        ]
+      },
+
+      "teOkuPreperation": {
+        "main": "^〜て^ おく",
+        "meaning": "... will be prepared",
+        "title": "Do something in preparation",
+        "format": "(statement て-form) おく.",
+        "follows": [
+        ],
+        "chainsWith": [
+          "&ておか& なきゃいけません - I must prepare &〜& in advance",
+          "&ておいて& ください - Please prepare in &〜& advance"
+        ],
+        "lesson": 15,
+        "notes": [
+          "おく is often shortened to よく in speech."
+        ]
+      }
+    },
+
+    "statementPatterns": {
+      "aruStatements": {
+        "main": "^〜^ がります",
+        "meaning": "See notes",
+        "title": "Where things are",
+        "format": "&[optional (time に]& &(noun)& がいます",
+        "follows": [
+        ],
+        "chainsWith": [],
+        "lesson": 4,
+        "notes": [
+          "Can mean:",
+          "There is (non-living thing).",
+          "There will be an event at time.",
+          "I have (non-living thing)."
+        ]
+      },
+      "iruStatements": {
+        "main": "^〜^ がいます",
+        "meaning": "There is (living thing). | I have (living thing such as friend/family/ect).",
+        "title": "There is/I have",
+        "format": "&[optional (place に]& &(noun)& がいます",
+        "follows": [
+        ],
+        "chainsWith": [],
+        "lesson": 4,
         "notes": []
       }
+    },
 
+    "opinionPatterns": {
+      "yoriComparison": {
+        "main": "^A^ のほうが ^B^ より ^〜^",
+        "meaning": "A is more property than B.",
+        "title": "Comparing 2 items",
+        "format": "&B& より &A& のほうが &property& ",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": 10,
+        "notes": [
+          "- The order can also be: &A& のほうが &B& より &〜&, though that is less natural.",
+          "- Pay attention to what より and のはうが are attached to rather than word order to determine which is superior.",
+          "- のほうが marks the superior/preferred option | より means than & marks the lesser option "
+        ]
+      },
+      "ichibanComparison": {
+        "main": "^ABC/Group^ の中で ^A^ が一ばん ^〜^",
+        "meaning": "A is the most property out of ABC/Group.",
+        "title": "Comparing 3 or more items",
+        "format": "&(AとBとC)& OR &(category noun)& の中で &A& が一ばん &(property)& ",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": 10,
+        "notes": [
+          "- To ask a question for comparison of 3 or more:",
+          "- Replace A question words such as だれ, どれ, 何, いつ, or どこ. | のほう　and どっち are NOT used."
+        ]
+      }
+    },
+
+    "qualifyingPatterns": {
+      "sentenceQualifiers": {
+        "main": "^sentence^ ^(noun)^ は",
+        "meaning": "N/a",
+        "title": "Qualifying nouns with verb statements",
+        "format": "&qualifier sentence (verb short form)& &noun& は",
+        "follows": [],
+        "chainsWith": [],
+        "lesson": 10,
+        "notes": [
+          "- The entire phrase is then treated as a noun.",
+          "- In the qualifying sentence, if は is used replace with が."
+        ]
+      }
     }
   }
 }

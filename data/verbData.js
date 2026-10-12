@@ -230,13 +230,6 @@ export const verbs = {
         },
     },
 
-    dailyRoutine: {},
-
-    gettingDressed: {},
-    cleaning: {},
-
-    health: {},
-
     learning: {
 
         narau: {
@@ -282,8 +275,6 @@ export const verbs = {
         }
     },
 
-    feeling: {},
-
     stateOfBehavior: {
         isoguToHurry: {
             main: "急ぐ", reading: "いそぐ", meaning: "To hurry",
@@ -292,25 +283,368 @@ export const verbs = {
                 {id:"usage", value: ""}
             ]
         },
+        osokunaruToBeLate: {
+            main: "おそくなる", reading: "", meaning: "To be late",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        matsuToWait: {
+            main: "まつ", reading: "", meaning: "To wait",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
     },
 
-    commonActions: {
+    conflictVerbs: {
         kiruCut: {
             main: "切る", reading: "きる", meaning: "To cut",
+            lesson: 14,
             notes: [
-                {id:"lesson", value:14},
-                {id:"usage", value: ""}
             ]
         },
-
         ataruHit: {
             main: "当", reading: "あたる", meaning: "To hit",
+            lesson: 14,
             notes: [
-                {id:"lesson", value:14},
-                {id:"usage", value: ""}
+            ]
+        },
+        kenkaSuruToHaveAFight: {
+            main: "けんかする", reading: "", meaning: "To have a fight; to quarrel",
+            lesson: 11,
+            notes: [
             ]
         },
     },
 
-    interacting: {}
+    feelingVerb: {
+        kinchousuruToGetNervous: {
+            main: "きんちょうする", reading: "", meaning: "To get nervous",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        shinpaisuruToWorry: {
+            main: "しんぱいする", reading: "", meaning: "To worry",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        kyoumigaAruToBeInterestedIn: {
+            main: "きょうみがある", reading: "", meaning: "To be interested in",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        nakuToCry: {
+            main: "なく", reading: "", meaning: "To cry",
+            lesson: 12,
+            notes: [
+            ]
+        },
+        tanoshiminisuruToLookForwardTo: {
+            main: "楽しみにする", reading: "たのしみにする", meaning: "To look forward to",
+            lesson: 7,
+            notes: [
+            ]
+        },
+        bikkurisuruToBeSurprised: {
+            main: "びっくりする", reading: "", meaning: "to be suprised",
+            lesson: 11,
+            notes: [
+            ]
+        },
+
+    },
+
+    commonActionVerbs: {
+
+        yomuToRead: {
+            main: "読む", reading: "よむ", meaning: "To read",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        kauToBuy: {
+            main: "買う", reading: "かう", meaning: "To buy",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        kakuToWrite: {
+            main: "書く", reading: "かく", meaning: "To write",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        utauToSing: {
+            main: "歌う", reading: "うたう", meaning: "To sing",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        toruToTakeAPicture: {
+            main: "とる", reading: "", meaning: "To take (a picture)",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        auToMeetSee: {
+            main: "会う", reading: "あう", meaning: "To meet; see (a person)",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        yasumuToRest: {
+            main: "休む", reading: "やすむ", meaning: "To rest; take a break; be absent",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        detsutaUToHelp: {
+            main: "でつたう", reading: "", meaning: "To help",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        yameruToQuit: {
+            main: "やめる", reading: "", meaning: "To quit",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        wasureruToForget: {
+            main: "わすれる", reading: "", meaning: "To forget; to leave behind",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        ryourisuruToCook: {
+            main: "りょうりする", reading: "", meaning: "To cook",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        }
+
+    },
+
+    interactionVerbs: {
+        kariruToBorrow: {
+            main: "かりる", reading: "", meaning: "To borrow",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        motsuToCarryHold: {
+            main: "持つ", reading: "もつ", meaning: "To carry; hold",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        kaesuToBorrow: {
+            main: "かえす", reading: "", meaning: "To borrow",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        akeruToOpen: {
+            main: "あける", reading: "", meaning: "To open (something)",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        shimeruToClose: {
+            main: "しめる", reading: "", meaning: "To close (something)",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        tsukeruToTurnOn: {
+            main: "つける", reading: "", meaning: "To turn on",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        kesuToTurnOff: {
+            main: "けす", reading: "", meaning: "To turn off",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        suteruToThrowAway: {
+            main: "すてる", reading: "", meaning: "To throw away",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        }
+
+    },
+    dailyRoutine: {
+        sumuToLive: {
+            main: "住む", reading: "すむ", meaning: "To live",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        hatarakuToWork: {
+            main: "働く", reading: "はたらく", meaning: "To work",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        neruToSleep: {
+            main: "ねる", reading: "", meaning: "To sleep",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        okiruToGetUp: {
+            main: "起きる", reading: "おきる", meaning: "To get up",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        taberuToEat: {
+            main: "食べる", reading: "た・べる", meaning: "To eat",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        nomuToDrink: {
+            main: "飲む", reading: "のむ", meaning: "To drink",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+    },
+
+    gettingDressed: {
+
+        kaburuToPutOnHat: {
+            main: "かぶる", reading: "", meaning: "To put on (hat/headpiece)",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+
+        hakuToPutOnBelowWaist: {
+            main: "はく", reading: "", meaning: "To put on (items below waist)",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+
+        meganeWoKakeruToPutOnGlasses: {
+            main: "めがねをかける", reading: "", meaning: "To put on (glasses)",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+
+        kiruToPutOnClothes: {
+            main: "着る", reading: "きる", meaning: "To put on (clothes above your waist)",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        }
+
+    },
+
+    cleaningVerbs: {
+
+        soujisuruToClean: {
+            main: "そうじする", reading: "", meaning: "To clean",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+
+        shawaaWoAbiruToTakeAShower: {
+            main: "シャワーおあびる", reading: "", meaning: "To take a shower",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+
+        ofuroiHairuToTakeABath: {
+            main: "おふろいはいる", reading: "", meaning: "To take a bathe",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+
+        arauToWash: {
+            main: "あらう", reading: "", meaning: "To wash",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+
+        sentakusuruToDoLaundry: {
+            main: "せんたくする", reading: "", meaning: "To do laundry",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        }
+
+    },
+
+    healthVerbs: {
+        kibunGaWaruiToFeelSick: {
+            main: "気分が悪い", reading: "きんぶんがわるい", meaning: "To feel sick",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        futoruToGainWeight: {
+            main: "ふとる", reading: "", meaning: "To gain weight",
+            notes: [
+            ]
+        },
+        yaseruToLoseWeight: {
+            main: "やせる", reading: "", meaning: "To lose weight",
+            lesson: null,
+            notes: [
+            ]
+        },
+        memaiGaSuruToFeelDizzy: {
+            main: "めまいがする", reading: "", meaning: "To feel dizzy",
+            lesson: 12,
+            notes: [
+            ]
+        },
+        kusuriOnomuToTakeMedicine: {
+            main: "くすりをのむ", reading: "", meaning: "To take medicine",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        onakaGaSukuToBecomeHungry: {
+            main: "おなかがすく", reading: "", meaning: "To become hungry",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        nodoGaKawakuToBecomeThirsty: {
+            main: "のどがかわく", reading: "", meaning: "To become thirsty",
+            notes: [
+                {id: "lesson", value: null},
+            ]
+        },
+        tsukareteiruToBeTired: {
+            main: "つかれている", reading: "", meaning: "To be tired",
+            lesson: 8,
+            notes: [
+            ]
+        },
+        tsukareruToGetTired: {
+            main: "つかれる", reading: "", meaning: "To get tired",
+            lesson: 11,
+            notes: [
+            ]
+        },
+
+
+    }
 }

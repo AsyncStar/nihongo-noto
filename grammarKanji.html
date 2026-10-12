@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bunpou & Kanji | Grammar & Kanji</title>
+  <script src="./logic/index.js" type="module"></script>
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Kosugi+Maru&family=M+PLUS+1:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div id="title">
+  <h4 class="app inline">日本語<wbr></wbr>の<wbr></wbr>ノート</h4>
+  <h1 class="topic inline">文法 & 漢字</h1>
+  <button class="link">
+    <a href="index.html">単語</a>
+  </button>
+</div>
+<div class="flex-row" data-section="grammar">
+<div class="other">
+
+  <div class="cycler-component" id="verb-conjugator">
+    <div class="conjugator-container">
+      <div class="cycler-wrappers">
+        <div id="voice-modality" class="cycler">
+          <div class="cycle active" data-value="standard">Standard</div>
+          <div class="cycle" data-value="potential">Potential</div>
+        </div>
+
+        <div id="form" class="cycler">
+          <div class="cycle active" data-value="polite">Polite</div>
+          <div class="cycle" data-value="short">Short</div>
+          <div class="cycle" data-value="te-form">Te-Form</div>
+        </div>
+
+        <div id="tense" class="cycler">
+          <div class="cycle active" data-value="present">Present</div>
+          <div class="cycle" data-value="past">Past</div>
+        </div>
+
+        <div id="polarity" class="cycler">
+          <div class="cycle active" data-value="affirmative">Affirmative</div>
+          <div class="cycle" data-value="negative">Negative</div>
+        </div>
+      </div>
+
+      <div class="flex">
+        <div id="kana-control">
+          <div class="segmented-control-kana">
+            <button type="button" class="segment active" data-value="u">う</button>
+            <button type="button" class="segment" data-value="ku">く</button>
+            <button type="button" class="segment" data-value="gu">ぐ</button>
+            <button type="button" class="segment" data-value="tsu">つ</button>
+            <button type="button" class="segment" data-value="mu">む</button>
+            <button type="button" class="segment" data-value="nu">ぬ</button>
+            <button type="button" class="segment" data-value="bu">ぶ</button>
+          </div>
+        </div>
+
+        <div class="conjugator-destination">
+          <div class="kana-dest"></div>
+          <div class="ending-dest"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+  <div class="tab-section">
+    <ul class="tabs">
+      <li class="tab active" data-path="general.aSoKo">あそこ</li>
+      <li class="tab" data-path="general.particles">Particles</li>
+      <li class="tab" data-path="general.positionWords">Positions</li>
+    </ul>
+
+    <div class="mini-dest destination">
+
+    </div>
+
+  </div>
+</div>
+
+<div class="flex-row" data-section="grammar">
+
+  <div class="tab-section">
+    <ul class="tabs">
+      <li class="tab active" data-path="patterns.advicePatterns">Advice</li>
+      <li class="tab" data-path="patterns.uncertaintyPatterns">Uncertainty</li>
+      <li class="tab" data-path="patterns.statePatterns">State</li>
+      <li class="tab" data-path="patterns.desirePatterns">Desire</li>
+      <li class="tab" data-path="patterns.descriptionPatterns">Description</li>
+      <li class="tab" data-path="patterns.statementPatterns">Statement</li>
+      <li class="tab" data-path="patterns.opinionPatterns">Opinion</li>
+      <li class="tab" data-path="patterns.qualifyingPatterns">Qualifying/Modifying</li>
+      <li class="tab" data-path="patterns.timePatterns">Time</li>
+      <li class="tab" data-path="patterns.countingPatterns">Counting</li>
+      <li class="tab" data-path="general.questionWords">Questions</li>
+    </ul>
+
+    <div class="med-dest destination">
+
+    </div>
+  </div>
+</div>
+
+
+<div data-section="kanji" class="kanji-section ">
+  <div class="tab-section">
+    <ul class="tabs">
+      <li class="tab active" data-path="kanji.l14Kanji">Lesson 14</li>
+    </ul>
+
+    <div id="kanji-dest" class="destination"></div>
+  </div>
+
+  <div class="showcase">
+    <div class="kanji-wrapper">
+      <div class="meaning"></div>
+      <div class="large-kanji"></div>
+      <div class="wrapper">
+        <div class="readings"></div>
+      </div>
+    </div>
+    <div class="kanji-dest"></div>
+  </div>
+</div>
+
+
+
+<dialog id="tile-modal">
+  <div class="modal-content">
+    <div class="modal-header"></div>
+    <div class="modal-reading"></div>
+    <div class="modal-meaning"></div>
+    <div class="modal-notes"></div>
+  </div>
+</dialog>
+<dialog id="grammar-modal">
+  <div id="grammar-modal-content">
+    <div class="top-wrapper">
+      <div class="modal-title">Title</div>
+      <div class="modal-lesson">Lesson</div>
+
+    </div>
+    <div class="bottom-wrapper">
+      <div class="modal-format">Format</div>
+      <div class="modal-meaning">Meaning</div>
+      <div class="modal-follows">
+        <span class="innerHeader">Follows...</span> <br>
+        <div id="followsWrapper"></div>
+      </div>
+      <div class="modal-chaining">
+        <span class="innerHeader">Can be followed by... / Related patterns</span> <br>
+        <div id="chainsWrapper"></div>
+      </div>
+      <div class="modal-notes"></div>
+    </div>
+  </div>
+
+</dialog>
+
+</body>
+</html>

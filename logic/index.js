@@ -1,16 +1,13 @@
 import * as vocabData from "../data/vocabData.js"
+import * as data from "../data/conjugationData.js"
 console.log(vocabData)
 let grammarData;
 
 
 async function init() {
-    const page = document.body.dataset.page;
 
-    if (page === "grammar") {
         const response = await fetch("./data/grammarData.json");
         grammarData = await response.json();
-
-    }
 
     renderTiles();
 }
@@ -131,7 +128,8 @@ function openPatternModal(event) {
     modalNotes.innerHTML = "<span class=\"innerHeader\">Notes</span> <br>";
     data.notes?.forEach((note) => {
         const noteElement = document.createElement("div");
-        noteElement.innerHTML = note;
+        noteElement.innerHTML = `${note}`.replace(/&(.*?)&/g,
+            '<span class="format-styling">$1</span>');
         modalNotes.appendChild(noteElement);
     })
 
@@ -258,27 +256,17 @@ restoreActiveTab();
 
 function getDataFromPath(data, path) {
     const parts = path.split(".");
-   parts.forEach(part => {
-
-       data = data[part];
-   })
+    for (const part of parts) {
+        data = data[part];
+    }
     return data
 }
 function createGroupTilesOnActive(tabSection) {
     const activeTab = tabSection.querySelector(".tab.active");
     const dest = tabSection.querySelector(".destination");
 
-    const page = document.body.dataset.page;
-        if (page === "vocab") {
-            let data = getDataFromPath(vocabData, activeTab.dataset.path);
+    const section = tabSection.parentElement.dataset.section;
 
-            Object.entries(data).forEach(([id, noun]) => {
-                createVocabTile(noun, dest);
-            })
-
-        } else if (page === "grammar") {
-            const section = tabSection.closest("[data-section]")?.dataset.section;
-            console.log(section);
             if (section === "vocab") {
                     let data = getDataFromPath(vocabData, activeTab.dataset.path);
 
@@ -287,21 +275,25 @@ function createGroupTilesOnActive(tabSection) {
                     })
 
             }
+            if (section === "grammar") {
+                let data = getDataFromPath(grammarData, activeTab.dataset.path);
+                console.log('Data passed to entries:', data);
+                Object.entries(data);
+                Object.entries(data).forEach(([id, pattern]) => {
+                    createPatternTile(pattern, dest);
+                })
 
-            let data = getDataFromPath(grammarData, activeTab.dataset.path);
+            }
 
-            Object.entries(data).forEach(([id, pattern]) => {
-                createPatternTile(pattern, dest);
-            })
-
-
-        } else if (page === "kanji")
+         if (section === "kanji")
         {
             let data = getDataFromPath(vocabData, activeTab.dataset.path);
             Object.entries(data).forEach(([kanji, data]) => {
                 createKanjiTile(kanji, data, dest);
             })
         }
+
+
 }
 
 
@@ -394,4 +386,176 @@ function showKanjiInfo(event) {
 
 
 
+}
+
+
+function cycler() {
+    const cyclers = document.querySelectorAll('.cycler');
+
+
+    cyclers.forEach((elem) => {
+        const items = elem.querySelectorAll('.cycle');
+        const totalOptions = items.length;
+        let currentIndex = 0;
+
+        items.forEach((opt, index) => {
+
+            opt.addEventListener('click', () => {
+                items[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % totalOptions;
+
+
+                items[currentIndex].classList.add('active');
+
+                if (elem.closest('#verb-conjugator')) {
+                    verbConjugator(cycler);
+                }
+            })
+
+        })
+    })
+
+
+}
+
+cycler();
+
+function segmentedControlKana() {
+    const control = document.querySelectorAll('.segmented-control-kana');
+
+    control.forEach((elem) => {
+
+        elem.addEventListener('click', e => {
+            const button = e.target.closest('.segment');
+            if (!button) return;
+
+            elem.querySelectorAll('.segment').forEach(seg => {
+                seg.classList.remove('active');
+            });
+
+            button.classList.add('active');
+            verbConjugator();
+
+        });
+    })
+
+}
+
+segmentedControlKana();
+
+function getActiveValue(control) {
+    const active = control.querySelector('.segment.active');
+    console.log(active);
+    return active ? active.dataset.value : null;
+}
+
+function getData(value) {
+    return data[value];
+}
+
+function verbConjugator() {
+    let vowelShift = data.vowels.iRow;
+    let ending = data.endings.polite.present.affirmative;
+    const verbConjugator = document.querySelector('#verb-conjugator');
+    const voiceModality = verbConjugator.querySelector('#voice-modality');
+    const form = verbConjugator.querySelector('#form');
+    const polarity = verbConjugator.querySelector('#polarity');
+    const tense = verbConjugator.querySelector('#tense');
+
+    let activeVoiceModality = voiceModality.querySelector('.cycle.active').dataset.value;
+    console.log(activeVoiceModality);
+    let activeForm = form.querySelector('.cycle.active').dataset.value;
+    console.log(activeForm);
+    let activePolarity = polarity.querySelector('.cycle.active').dataset.value;
+    console.log(activePolarity);
+    let activeTense = tense.querySelector('.cycle.active').dataset.value;
+    console.log(activeTense);
+
+    // Handle the vowel shift first
+
+    if (activeForm === "polite") {
+        if (activeVoiceModality === "standard") {
+            vowelShift = data.vowels.iRow;
+        }
+        if (activeVoiceModality === "potential") {
+            vowelShift = data.vowels.eRow;
+        }
+    } else if (activeForm === "short") {
+        if (activeVoiceModality === "standard") {
+            vowelShift = data.vowels.dictionary;
+            if (activePolarity === "negative") {
+                vowelShift = data.vowels.aRow;
+            }
+
+            if (activePolarity === "affirmative" && activeTense === "past") {
+                vowelShift = data.vowels.nTaDaRow;
+            }
+        }
+        if (activeVoiceModality === "potential") {
+            vowelShift = data.vowels.eRowDictionary;
+
+            if (activePolarity === "negative" || activeTense === "past") {
+                vowelShift = data.vowels.eRow;
+            }
+
+            if (activePolarity === "affirmative" && activeTense === "past") {
+                vowelShift = data.vowels.eTaDaRow;
+            }
+
+
+
+        }
+    } else if (activeForm === "te-form") {
+        if (activeVoiceModality === "standard") {
+            vowelShift = data.vowels.baseTe;
+        }
+        if (activeVoiceModality === "potential") {
+            vowelShift = data.vowels.eRowTe;
+        }
+    }
+
+    // Then the ending
+    if (activeForm === "polite") {
+        if (activeTense === "present") {
+            if (activePolarity === "affirmative") {
+                ending = data.endings.polite.present.affirmative
+            } else {
+                ending = data.endings.polite.present.negative;
+            }
+        } else {
+            if (activePolarity === "affirmative") {
+                ending = data.endings.polite.past.affirmative
+            }
+            else { ending = data.endings.polite.past.negative }
+        }
+    } else if (activeForm === "short") {
+        if (activeTense === "present") {
+            if (activePolarity === "affirmative") {
+                ending = data.endings.short.present.affirmative
+            } else {
+                ending = data.endings.short.present.negative;
+            }
+        } else {
+            if (activePolarity === "affirmative") {
+                ending = data.endings.short.past.affirmative
+            }
+            else { ending = data.endings.short.past.negative }
+        }
+    } else {
+        ending = data.endings.te.blank;
+    }
+
+    // Get kana
+
+    const kanaControl = verbConjugator.querySelector('.segmented-control-kana');
+    let activeKana = getActiveValue(kanaControl);
+    console.log(activeKana);
+
+    let newKana = vowelShift[activeKana];
+
+    const kanaDest = verbConjugator.querySelector(".kana-dest");
+    const endingDest = verbConjugator.querySelector(".ending-dest");
+
+    kanaDest.innerHTML = newKana;
+    endingDest.innerHTML = ending;
 }

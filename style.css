@@ -14,16 +14,20 @@
 
     --light-bg-color: #f3f0e8;
     --light-neutral-color: #fffbf2;
-    --dark-accent-color: #425a36;
+    --dark-accent-color: #293921;
 
-    --primary-color: #b0ba9d;;
+    --primary-color: #b9c1ab;;
     --secondary-color: #496a49;
 
 }
 
+.flex-row {
+    display: flex;
+}
+
 body {
     font-family: var(--main-font-family), sans-serif;
-    background-color: var(--light-bg-color);
+    background-color: var(--primary-color);
 }
 
 #title {
@@ -75,22 +79,21 @@ body {
 
 .tile, .kanji-tile {
     display: inline-block;
-    border: 0.1em solid rgba(82, 94, 60, 0.36);
+    border: 0.14em solid #889f7c;
     border-radius: 0.3em;
     margin: 0.2em;
     text-wrap: nowrap;
-    font-size: 18px;
+    font-size: 16px;
     height: fit-content;
-
+    font-weight: 430;
+    background-color: #fffefa;
 }
 .kanji-tile {
     padding: 0.06em;
-    font-size: 17px;
+    font-size: 16px;
     height: fit-content;
 
 }
-
-
 
 .highlight {
     color: #fd3adb;
@@ -104,7 +107,7 @@ body {
     padding: 0;
     cursor: pointer;
     flex-wrap: wrap;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     height: 40px;
     overflow: scroll;
     margin-bottom: auto;
@@ -131,7 +134,8 @@ body {
 }
 
 .tab:hover {
-    border-bottom: 5px solid var(--secondary-color);
+    background: var(--dark-accent-color);
+    color: white;
 
 }
 .tab-section {
@@ -143,10 +147,93 @@ body {
     border: 2px solid rgba(0, 0, 0, 0.16);
     height: 85px;
     overflow: scroll;
+    background-color: #b0ba9d;
 }
 
-#timeDest {
+.wrapper {
+
+}
+
+.segmented-control-kana {
+    display: inline-flex;
+    background-color: var(--secondary-color);
+    padding: 4px;
+    border-radius: 0.5em;
+    text-wrap: nowrap;
     height: 40px;
+}
+
+.segmented-control-kana {
+    .segment {
+        font-size: 16px;
+    }
+}
+.segment {
+    background: transparent;
+    border: none;
+    padding: 10px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.segment.active {
+    background-color: var(--dark-accent-color);
+    color: white;
+    box-shadow:  0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+
+.conjugator-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.8em;
+    gap: 0.9em;
+
+    .conjugator-inner-wrapper {
+        display: flex;
+        gap: 0.3em;
+
+        .segmented-control-kana {
+            overflow: scroll;
+            max-width: 150px;
+        }
+
+        .destination {
+            display: flex;
+            font-size: 1.42em;
+        }
+    }
+}
+/* ============== CYCLER STYLING ==========*/
+.cycler {
+    display: inline-block;
+    border: 1px solid transparent;
+    background-color: var(--secondary-color);
+    border-radius: 0.5em;
+    width: fit-content;
+    height: 35px;
+    padding: 0.1em;
+    justify-content: center;
+    align-items: center;
+
+}
+.cycler:hover {
+    background-color: var(--dark-accent-color);
+    color: white;
+}
+.cycle {
+    display: none;
+}
+.cycle.active {
+    display: inline-block;
+}
+
+.cycler-component .destination {
+    display: inline-block;
 }
 
 /*  ============= MODAL STYLING ============= */
@@ -320,7 +407,8 @@ body {
 /*  ============= RESPONSIVE STYLING ============= */
 
 /* For half of a laptop scree, looks okay for full screen too*/
-@media (min-width: 300px) and (max-height: 600px) {
+@media (min-width: 400px) and (max-height: 800px) {
+
 
     #title {
         font-size: 20px;
@@ -332,36 +420,36 @@ body {
         }
 
         .topic {
-            font-size: 30px;
+            font-size: 20px;
         }
 
         button {
             background-color: var(--dark-accent-color);
-            width: fit-content;
-            height: fit-content;
+            width: 50px;
+            height: 50px;
             padding: 0.2em;
             align-self: flex-end;
             margin-left: auto;
+            overflow: hidden;
 
         }
         a {
             text-decoration: none;
             word-break: auto-phrase;
             color: white;
-            font-size: 20px;
+            font-size: 16px;
 
         }
 
     }
 
-
     .tile {
-        font-size: 15px;
+        font-size: 16px;
 
     }
 
     .kanji-tile {
-        font-size: 13px;
+        font-size: 16px;
 
     }
 
@@ -372,60 +460,109 @@ body {
 
 
         li {
-            height: 15px;
+            height: 14px;
             width: fit-content;
             text-wrap: wrap;
-            margin: 0.18em;
-
-            font-size: 10px;
+            font-size: 12px;
         }
 
     }
 
-    .tab-section .destination {
-        border: 1px solid rgba(0, 0, 0, 0.16);
-        height: 100px;
-        overflow: scroll;
+    .tab-header {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .tab-section {
+        .destination {
+            border: 1px solid rgba(0, 0, 0, 0.16);
+            min-height: 130px;
+            height: 130px;
+            max-height: 130px;
+            overflow: scroll;
+
+        }
+    }
+
+    .tab-section {
+        .mini-dest {
+
+            min-height: 65px;
+            height: 65px;
+            max-height: 65px;
+        }
+    }
+
+    .tab-section {
+        .med-dest {
+            min-height: 80px;
+            max-height: 80px;
+        }
+    }
+
+    .flex-row {
+        div {
+            flex: 1;
+        }
 
     }
 
-    .kanji-page {
+    .conjugator-container {
+        margin: 0.1em;
+        gap: 0.2em;
+
+       .conjugator-destination {
+           display: flex;
+           gap: 0;
+       }
+        .kana-dest, .ending-dest {
+            margin: 0;
+        }
+    }
+
+    .segmented-control-kana {
+        .segment {
+            font-size: 12px;
+        }
+    }
+
+    .cycler {
+        height: fit-content;
+
+        font-size: 16px;
+    }
+
+    .cycle {
+        font-size: 13px;
+    }
+    .kanji-section {
         .tabs {
             height: 30px;
         }
 
         .tab-section .destination {
-            min-height: 50px;
-            max-height: 50px;
+            min-height: 80px;
+            max-height: 70px;
         }
     }
 
-    #timeDest {
-        height: 30px;
-    }
 
-    .wrapper {
-        display: flex;
+    #tile-modal {
+        width: 80%;
+        height: 50%;
 
-        .tab-section {
-            flex: 1;
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            font-size: 20px;
         }
-    }
 
-    .modal-content {
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        font-size: 13px;
-    }
+        .modal-header {
+            font-size: 50px;
 
-    .modal-header {
-        font-size: 20px;
-
-        @media (max-width: 600px) {
-            font-size: 40px;
-            text-wrap: nowrap;
         }
+
     }
 
     #grammar-modal {
@@ -447,7 +584,7 @@ body {
 
 
         .modal-notes {
-            font-size: 12px;
+            font-size: 16px;
         }
 
         .modal-follows {
@@ -469,17 +606,25 @@ body {
         margin-bottom: 0;
     }
 
+    .flex {
+        display: flex;
+        flex-direction: column;
+    }
+
     .kanji-section {
         width: 100%;
-        min-height: 70px;
         padding: 0.5em;
 
+        .showcase {
+            width: 100%;
+        }
+
         .large-kanji {
-            font-size: 20px;
+            font-size: 30px;
         }
 
         .wrapper {
-            font-size: 10px;
+            font-size: 8px;
             gap: 0.5em;
 
             .readings {

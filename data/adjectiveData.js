@@ -10,55 +10,46 @@ name: {
 export const adjectives = {
 
     feelingsOpinions: {
-
         omoshirui: {
             main: "おもしるい", reading: "", meaning: "Interesting; funny",
             notes:  [
                 {id: "lesson", value: ""}]
         },
-
         tsumaranai: {
             main: "つまらない", reading: "", meaning: "Boring",
             notes:  [
                 {id: "lesson", value: ""}]
         },
-
         nemui: {
             main: "ねむい", reading: "", meaning: "Sleepy",
             notes:  [
                 {id: "lesson", value: ""}]
         },
-
         kowai: {
             main: "こわい", reading: "", meaning: "Frightening",
             notes:  [
                 {id: "lesson", value: ""}]
         },
-
         benrina: {
             main: "べんりな", reading: "", meaning: "Convenient",
             notes:  [
                 {id: "lesson", value: ""}]
         },
-
         taihenna: {
             main: "たいへんな", reading: "", meaning: "Tough (situation)",
             notes:  [
                 {id: "lesson", value: ""}]
         },
-
         sabishii: {
             main: "さびしいい", reading: "", meaning: "Lonely",
             notes:  [
                 {id: "lesson", value: ""}]
         },
-
         kantannaSimple: {
             main: "かんたんな", reading: "", meaning: "Simple (as in easy)",
             notes:  [
                 {id: "lesson", value: ""}]
         },
-
         rakunaEasy: {
             main: "楽な", reading: "らくな",　meaning: "Easy",
             notes: [
@@ -70,25 +61,21 @@ export const adjectives = {
             notes:  [
                 {id: "lesson", value: ""}]
         },
-
         sutekinaNice: {
             main: "すてきな", reading: "", meaning: "Nice",
             notes:  [
                 {id: "lesson", value: ""}]
         },
-
         tanoshiiFun: {
             main: "楽しい", reading: "たのしい", meaning: "Fun",
             notes:  [
                 {id: "lesson", value: ""}]
         },
-
         itaiHurt: {
             main: "いたい", reading: "", meaning: "Hurt; painful",
             notes:  [
                 {id: "lesson", value: ""}]
         },
-
         hoshiiWant: {
             main: "ほしい", reading: "", meaning: "To want",
             notes: [
@@ -96,20 +83,24 @@ export const adjectives = {
                 {id:"usage", value: "Use with (thing) が"}
             ]
         },
-
         shinsetsunaKind: {
             main: "親切な", reading: "しんせつな", meaning: "Kind",
             notes: [
                 {id:"lesson", value:14},
             ]
         },
-
         shitashiiIntimate: {
             main: "親しい", reading: "したしい", meaning: "Intimate",
             notes: [
                 {id:"lesson", value:14},
             ]
         },
+        majimeSerious: {
+            main: "まじめ", reading: "", meaning: "Serious; sober; diligent",
+            lesson: 12,
+            notes: [
+            ]
+        }
 
 
 
@@ -203,6 +194,22 @@ export const adjectives = {
                 {id:"lesson", value:14},
             ]
         },
+        isogashiiBusy: {
+            main: "忙し", reading: "いそがし", meaning: "Busy (people/day)",
+            lesson: null,
+            notes: [
+                "Used for people, not places. For places use にぎやかな."
+
+            ]
+        },
+
+        himaFree: {
+            main: "ひま", reading: "", meaning: "Not busy; free (time)",
+            lesson: null,
+            notes: [
+            ]
+        }
+
 
     },
 
@@ -298,20 +305,7 @@ export const adjectives = {
             ]
         },
 
-        isogashiiBusy: {
-            main: "いそがしい", reading: "", meaning: "Busy (people/day)",
-            lesson: null,
-            notes: [
 
-            ]
-        },
-
-        himaFree: {
-            main: "ひま", reading: "", meaning: "Not busy; free (time)",
-            lesson: null,
-            notes: [
-            ]
-        }
     },
 
         colors: {
@@ -330,5 +324,11 @@ export const adjectives = {
                 notes:  [
                     {id: "lesson", value: ""}]
             },
+            bejjyu: {
+                main: "べージュ", reading: "まいしゅう", meaning: "Every week",
+                lesson: 9,
+                notes: [
+                ]
+            }
         },
 }

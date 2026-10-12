@@ -17,12 +17,30 @@ export const time = {
         asa: {
             main: "朝", reading: "あさ",　meaning: "Morning",
             notes: []
+        },
+        yoruNight: {
+            main: "夜", reading: "よる", meaning: "Night",
+            lesson: null,
+            notes: [
+            ]
         }
 
 
     },
 
     dayTemporalDeixis: {
+        maishuuEveryNight: {
+            main: "毎晩", reading: "まいばん", meaning: "Every night",
+            lesson: 3,
+            notes: [
+            ]
+        },
+        maishuuEveryDay: {
+            main: "毎日", reading: "まいにち", meaning: "Every day",
+            lesson: 3,
+            notes: [
+            ]
+        },
         atotoi: {
             main: "あととい", reading: "", meaning: "The day before last",
             notes: [
@@ -66,6 +84,12 @@ export const time = {
     },
 
     weekTemporalDeixis: {
+        maishuuEveryWeek: {
+            main: "毎週", reading: "まいしゅう", meaning: "Every week",
+            lesson: 8,
+            notes: [
+            ]
+        },
         nishuukanmae: {
             main: "二週間前", reading: "にしゅうかんまえ",　meaning: "Two weeks ago",
             notes: [
